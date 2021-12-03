@@ -1,4 +1,3 @@
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 import controllers.FileController;
@@ -54,6 +53,7 @@ public class Main {
                 break;
             case 4:
                 System.out.println("Programa encerrado!");
+                System.exit(0);
                 break;
             default:
                 System.out.println("Opção inválida!");
