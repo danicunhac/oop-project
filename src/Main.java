@@ -40,7 +40,6 @@ public class Main {
 
                 break;
             case 3:
-                System.out.println("3");
                 try {
                     arquivo.delete("file.txt");
                     System.out.println("Arquivo apagado!");
