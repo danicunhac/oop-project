@@ -9,14 +9,12 @@ import java.util.Scanner;
 public class FileController {
     public void read(String path) throws IOException {
         BufferedReader buffRead = new BufferedReader(new FileReader(path));
-        String linha = "";
         while (true) {
+            String linha = buffRead.readLine();
             if (linha != null) {
                 System.out.println(linha);
-
             } else
                 break;
-            linha = buffRead.readLine();
         }
         buffRead.close();
     }
@@ -31,8 +29,8 @@ public class FileController {
         buffWrite.close();
     }
 
-    public void delete() {
-
+    public void delete(String path) throws IOException {
+        new FileWriter(path, false).close();
     }
 
 }

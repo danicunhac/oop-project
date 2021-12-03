@@ -1,3 +1,4 @@
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 import controllers.FileController;
@@ -31,7 +32,7 @@ public class Main {
                 try {
                     System.out.println("---- Começo do arquivo ----");
                     arquivo.read("file.txt");
-                    System.out.println("---- Fim do arquivo! ----");
+                    System.out.println("---- Final do arquivo ----");
                 } catch (IOException e) {
                     throw new IOException(e);
                 } finally {
@@ -41,6 +42,15 @@ public class Main {
                 break;
             case 3:
                 System.out.println("3");
+                try {
+                    arquivo.delete("file.txt");
+                    System.out.println("Arquivo apagado!");
+                } catch (IOException e) {
+                    throw new IOException(e);
+                } finally {
+                    System.out.println("Programa encerrado!");
+                }
+
                 break;
             case 4:
                 System.out.println("Programa encerrado!");
